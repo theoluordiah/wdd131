@@ -1,0 +1,140 @@
+:root {
+    --primary: #5c2a9d;
+    --primary-dark: #3b1a68;
+    --accent: #f4a900;
+    --light-bg: #f5f1fa;
+    --dark-text: #2c2340;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Source Sans 3", Arial, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+#site-title {
+    font-family: "Lora", Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+#menu {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary-dark);
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.85rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent);
+    color: var(--primary-dark);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: min(92%, 1100px);
+    margin: 2rem auto 3rem;
+}
+
+h1 {
+    font-family: "Lora", Georgia, serif;
+    font-size: 2.25rem;
+    color: var(--primary);
+    text-align: center;
+}
+
+figure {
+    background: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+figure img {
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+figure:hover img {
+    filter: brightness(1.05);
+}
+
+figcaption {
+    text-align: center;
+    padding-top: 0.75rem;
+    font-weight: 600;
+}
+
+figcaption a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+figcaption a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 1.25rem 1rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+footer #lastModified {
+    color: #f6d8a8;
+}
