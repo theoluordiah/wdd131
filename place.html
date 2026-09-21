@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Country Page – Nigeria</title>
+    <meta name="description" content="Nigeria country page – responsive layout with hero image, country data, and current weather for Lagos, Nigeria.">
+    <meta name="author" content="Oluchukwu Ordiah">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="site-title">Nigeria</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#data">Data</a>
+            <a href="#weather">Weather</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="images/hero-large.webp 1600w">
+                <source media="(min-width: 640px)" srcset="images/hero-medium.webp 800w">
+                <img src="images/hero-small.webp"
+                     srcset="images/hero-small.webp 600w, images/hero-medium.webp 800w, images/hero-large.webp 1600w"
+                     sizes="100vw"
+                     alt="Aerial view of Lagos, Nigeria">
+            </picture>
+
+            <section class="card data" id="data">
+                <h2>Data</h2>
+                <ul>
+                    <li><span class="label">Area:</span><span class="value">923,769 km²</span></li>
+                    <li><span class="label">Population:</span><span class="value">≈ 230 million</span></li>
+                    <li><span class="label">Capital:</span><span class="value">Abuja</span></li>
+                    <li><span class="label">Languages:</span><span class="value">English, Hausa, Yoruba, Igbo</span></li>
+                    <li><span class="label">Currency:</span><span class="value">Nigerian Naira (₦)</span></li>
+                    <li><span class="label">Time Zone:</span><span class="value">West Africa Time (UTC+1)</span></li>
+                    <li><span class="label">Calling Code:</span><span class="value">+234</span></li>
+                    <li><span class="label">Internet TLD:</span><span class="value">.ng</span></li>
+                </ul>
+            </section>
+
+            <section class="card weather" id="weather">
+                <h2>Weather</h2>
+                <img class="weather-icon" src="images/weather-icon.svg" alt="Partly cloudy weather icon">
+                <p class="condition">Lagos, Nigeria — Partly Cloudy</p>
+                <p class="readings">
+                    <span class="label">Temperature:</span><span class="value">25°C</span>
+                    <span class="label">Wind Speed:</span><span class="value">12 km/h</span>
+                    <span class="label">Humidity:</span><span class="value">78%</span>
+                    <span class="label">Wind Chill:</span><span id="windchill" class="value">N/A</span>
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> 🌴 Oluchukwu Ordiah, Lagos, Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

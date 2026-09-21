@@ -1,0 +1,70 @@
+@media (min-width: 640px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 1.5rem;
+    }
+
+    .site-title {
+        padding: 1rem 1.25rem;
+    }
+
+    nav {
+        background-color: transparent;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        border-radius: 4px;
+    }
+
+    .hero {
+        position: relative;
+        height: min(64vh, 560px);
+        overflow: hidden;
+    }
+
+    .hero picture img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .card {
+        width: auto;
+        margin: 0;
+        position: absolute;
+    }
+
+    #data {
+        top: 2.5rem;
+        left: 3.5rem;
+        width: min(340px, 34%);
+    }
+
+    #weather {
+        right: 3.5rem;
+        bottom: 2.5rem;
+        width: min(330px, 34%);
+    }
+
+    .weather-icon {
+        display: none;
+    }
+
+    #weather h2::after {
+        content: "⛅";
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    #data {
+        left: 4.5rem;
+    }
+
+    #weather {
+        right: 4.5rem;
+    }
+}
