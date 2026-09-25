@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temple Album</title>
+    <meta name="description" content="A responsive, filterable gallery of temples of The Church of Jesus Christ of Latter-day Saints.">
+    <meta name="author" content="Oluchukwu Ordiah">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <span id="site-title">Temple Album</span>
+            <button id="menu" aria-label="Toggle navigation" aria-controls="nav" aria-expanded="false">☰</button>
+        </div>
+        <nav id="nav" aria-label="Temple filters">
+            <a id="home" href="#temple-container" data-filter="home" aria-current="page">Home</a>
+            <a id="old" href="#temple-container" data-filter="old">Old</a>
+            <a id="new" href="#temple-container" data-filter="new">New</a>
+            <a id="large" href="#temple-container" data-filter="large">Large</a>
+            <a id="small" href="#temple-container" data-filter="small">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="page-title">Home</h1>
+        <p id="result-count" class="result-count" role="status" aria-live="polite"></p>
+        <div id="temple-container" class="temple-container"></div>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> Oluchukwu Ordiah, Lagos, Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

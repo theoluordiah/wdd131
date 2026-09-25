@@ -1,0 +1,205 @@
+:root {
+    --primary: #5c2a9d;
+    --primary-dark: #3b1a68;
+    --accent: #f4a900;
+    --light-bg: #f5f1fa;
+    --dark-text: #2c2340;
+    --muted-text: #665d72;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Source Sans 3", Arial, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+#site-title {
+    font-family: "Lora", Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+#menu {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary-dark);
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.85rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    background-color: var(--accent);
+    color: var(--primary-dark);
+}
+
+#menu:focus-visible,
+nav a:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: -3px;
+}
+
+main {
+    width: min(92%, 1100px);
+    margin: 2rem auto 3rem;
+    flex: 1;
+}
+
+h1 {
+    font-family: "Lora", Georgia, serif;
+    font-size: 2.25rem;
+    color: var(--primary);
+    text-align: center;
+}
+
+.result-count {
+    margin: 0.25rem 0 2rem;
+    color: var(--muted-text);
+    text-align: center;
+}
+
+.temple-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.temple-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.temple-card:hover {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+    transform: translateY(-3px);
+}
+
+.temple-card img {
+    width: 100%;
+    aspect-ratio: 8 / 5;
+    object-fit: cover;
+    display: block;
+    background-color: #e8e1ef;
+}
+
+.temple-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.25rem;
+}
+
+.temple-card h2 {
+    font-family: "Lora", Georgia, serif;
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+
+.temple-details {
+    display: grid;
+    gap: 0.65rem;
+    margin-top: 1rem;
+}
+
+.temple-details div {
+    display: grid;
+    grid-template-columns: minmax(6rem, 0.4fr) 1fr;
+    gap: 0.75rem;
+}
+
+.temple-details dt {
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.temple-details dd {
+    margin: 0;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    padding: 2rem;
+    background: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: var(--muted-text);
+    text-align: center;
+}
+
+footer {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 1.25rem 1rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+footer #lastModified {
+    color: #f6d8a8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    nav a,
+    .temple-card {
+        transition: none;
+    }
+
+    .temple-card:hover {
+        transform: none;
+    }
+}
