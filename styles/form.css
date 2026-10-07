@@ -84,14 +84,16 @@ fieldset {
 }
 
 .check {
-    display: block;
     padding: 0.25rem 0;
-    cursor: pointer;
 }
 
 .check input {
     margin-right: 0.5rem;
     accent-color: var(--primary);
+}
+
+.check label {
+    cursor: pointer;
 }
 
 /* star rating */
@@ -124,7 +126,7 @@ fieldset {
     width: 1px;
     height: 1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
     white-space: nowrap;
 }
 
@@ -166,4 +168,24 @@ footer {
     color: var(--white);
     text-align: center;
     padding: 1rem;
+}
+
+@media (min-width: 640px) {
+    main {
+        margin: 3rem auto;
+    }
+
+    form,
+    .confirmation {
+        padding: 2rem 2.5rem;
+    }
+
+    fieldset:not(.rating) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    fieldset:not(.rating) legend {
+        grid-column: 1 / -1;
+    }
 }
