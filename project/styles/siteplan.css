@@ -100,42 +100,20 @@ th {
     gap: 1.5rem;
 }
 
-figcaption {
-    text-align: center;
-    font-weight: 600;
-}
-
-.wf {
-    border: 2px solid var(--dark);
-    padding: 0.5rem;
-    background-color: white;
-}
-
-.mobile {
-    max-width: 220px;
+.wireframes img {
+    display: block;
+    width: 100%;
+    height: auto;
     margin: 0 auto;
 }
 
-.box {
-    border: 1px solid var(--dark);
-    padding: 0.4rem;
-    margin-bottom: 0.4rem;
+.wireframes figure:first-child img {
+    max-width: 300px;
+}
+
+figcaption {
     text-align: center;
-    background-color: #e4e9e6;
-}
-
-.hero {
-    height: 90px;
-}
-
-.card {
-    height: 60px;
-}
-
-.row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.4rem;
+    font-weight: 600;
 }
 
 @media (min-width: 800px) {
