@@ -1,0 +1,5 @@
+Subject: Lagos tech community guide
+
+Content: The website provides information about technology communities, events, coworking spaces, and useful resources for developers and other creatives in Lagos. It includes information about different communities and events, along with a form where visitors can submit a community or event suggestion. JavaScript is used to display and filter information, respond to user interactions, and save user preferences with localStorage.
+
+Reason: I choose this subject because I am interested in software development and the technology community in Lagos. The topic gives me enough content to create a useful website while also allowing me to demonstrate the HTML, CSS, and JavaScript skills required for the project.
